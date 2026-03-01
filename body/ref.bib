@@ -42,3 +42,150 @@
   year={2020},
   month={May}
 }
+
+
+
+@article{10.1145/3357033,
+author = {Lipp, Moritz and Schwarz, Michael and Gruss, Daniel and Prescher, Thomas and Haas, Werner and Horn, Jann and Mangard, Stefan and Kocher, Paul and Genkin, Daniel and Yarom, Yuval and Hamburg, Mike and Strackx, Raoul},
+title = {Meltdown: reading kernel memory from user space},
+year = {2020},
+issue_date = {June 2020},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {63},
+number = {6},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/3357033},
+doi = {10.1145/3357033},
+abstract = {Lessons learned from Meltdown's exploitation of the weaknesses in today's processors.},
+journal = {Commun. ACM},
+month = may,
+pages = {46–56},
+numpages = {11}
+}
+
+@inproceedings{10.1145/3719027.3744833,
+author = {Jin, Yu and Sun, Minghong and Wang, Dongsheng and Qiu, Pengfei and Zhang, Yinqian and Deng, Shuwen},
+title = {GhostCache: Timer- and Counter-Free Cache Attacks Exploiting Weak Coherence on RISC-V and ARM Chips},
+year = {2025},
+isbn = {9798400715259},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3719027.3744833},
+doi = {10.1145/3719027.3744833},
+abstract = {Microarchitectural side-channel attacks, which have become increasingly prevalent, often rely on high-resolution timers. Emerging processor architectures have sought to mitigate these vulnerabilities by restricting access to fine-grained timers. In this work, we verify the widespread existence of weak coherence in L1 cache on multiple RISC chips, exploit it to bypass this type of mitigation and propose GhostCache, which constructs timer-free and counter-free instruction cache attacks. It introduces two novel and widely applied attack primitives, Modify+Recall and Call+ModifyCall, which are applicable to both RISC-V and ARM architectures and affect 6 commercial and 3 open-source large RISC processors. To the best of our knowledge, we present the first demonstration of timer-free and counter-free cache attacks on RISC-V processors. We also identify undisclosed features, such as the next-three-line prefetching mechanism and direct forwarding of evicted instructions from data cache to instruction cache. Furthermore, we develop four types of covert channels, achieving up to 1.68 MB/s with a 0.01\% error rate. For side-channel attacks, GhostCache enables three types of timer-free real-world attacks. The first is an end-to-end website fingerprinting attack, achieving 92.02\% accuracy across 100 website classes. The second is a set of kernel leakage attacks, including the discovery of a new Spectre disclosure gadget via a function pointer to leak arbitrary kernel data at 92.91\% accuracy. We also launched an attack to reconstruct cryptographic keys. Lastly, we propose potential countermeasures to address these vulnerabilities in both RISC-V and ARM architectures.},
+booktitle = {Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {3795–3809},
+numpages = {15},
+keywords = {covert channels, micro-architectural side channels, security},
+location = {Taipei, Taiwan},
+series = {CCS '25}
+}
+
+@inproceedings{10.5555/3698900.3699201,
+author = {Borkar, Pallavi and Chen, Chen and Rostami, Mohamadreza and Singh, Nikhilesh and Kande, Rahul and Sadeghi, Ahmad-Reza and Rebeiro, Chester and Rajendran, Jeyavijayan (JV)},
+title = {WhisperFuzz: white-box fuzzing for detecting and locating timing vulnerabilities in processors},
+year = {2024},
+isbn = {978-1-939133-44-1},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Timing vulnerabilities in processors have emerged as a potent threat. As processors are the foundation of any computing system, identifying these flaws is imperative. Recently fuzzing techniques, traditionally used for detecting software vulnerabilities, have shown promising results for uncovering vulnerabilities in large-scale hardware designs, such as processors. Researchers have adapted black-box or grey-box fuzzing to detect timing vulnerabilities in processors. However, they cannot identify the locations or root causes of these timing vulnerabilities, nor do they provide coverage feedback to enable the designer's confidence in the processor's security.To address the deficiencies of the existing fuzzers, we present WhisperFuzz—the first white-box fuzzer with static analysis —aiming to detect and locate timing vulnerabilities in processors and evaluate the coverage of microarchitectural timing behaviors. WhisperFuzz uses the fundamental nature of processors' timing behaviors, microarchitectural state transitions, to localize timing vulnerabilities. WhisperFuzz automatically extracts microarchitectural state transitions from a processor design at the register-transfer level (RTL) and instruments the design to monitor the state transitions as coverage. Moreover, WhisperFuzz measures the time a design-under-test (DUT) takes to process tests, identifying any minor, abnormal variations that may hint at a timing vulnerability. Whisper-Fuzz detects 12 new timing vulnerabilities across advanced open-sourced RISC-V processors: BOOM, Rocket Core, and CVA6. Eight of these violate the zero latency requirements of the Zkt extension and are considered serious security vulnerabilities. Moreover, WhisperFuzz also pinpoints the locations of the new and the existing vulnerabilities.},
+booktitle = {Proceedings of the 33rd USENIX Conference on Security Symposium},
+articleno = {301},
+numpages = {18},
+location = {Philadelphia, PA, USA},
+series = {SEC '24}
+}
+
+@inproceedings{10.5555/3620237.3620638,
+author = {Daniel, Lesly-Ann and Bognar, Marton and Noorman, Job and Bardin, S\'{e}bastien and Rezk, Tamara and Piessens, Frank},
+title = {PROSPECT: provably secure speculation for the constant-time policy},
+year = {2023},
+isbn = {978-1-939133-37-3},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {We propose PROSPECT, a generic formal processor model providing provably secure speculation for the constant-time policy. For constant-time programs under a non-speculative semantics, PROSPECT guarantees that speculative and out-of-order execution cause no microarchitectural leaks. This guarantee is achieved by tracking secrets in the processor pipeline and ensuring that they do not influence the microarchitectural state during speculative execution. Our formalization covers a broad class of speculation mechanisms, generalizing prior work. As a result, our security proof covers all known Spectre attacks, including load value injection (LVI) attacks.In addition to the formal model, we provide a prototype hardware implementation of PROSPECT on a RISC-V processor and show evidence of its low impact on hardware cost, performance, and required software changes. In particular, the experimental evaluation confirms our expectation that for a compliant constant-time binary, enabling ProSpeCT incurs no performance overhead.},
+booktitle = {Proceedings of the 32nd USENIX Conference on Security Symposium},
+articleno = {401},
+numpages = {18},
+location = {Anaheim, CA, USA},
+series = {SEC '23}
+}
+
+@INPROCEEDINGS{8835233,
+  author={Kocher, Paul and Horn, Jann and Fogh, Anders and Genkin, Daniel and Gruss, Daniel and Haas, Werner and Hamburg, Mike and Lipp, Moritz and Mangard, Stefan and Prescher, Thomas and Schwarz, Michael and Yarom, Yuval},
+  booktitle={2019 IEEE Symposium on Security and Privacy (SP)}, 
+  title={Spectre Attacks: Exploiting Speculative Execution}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1-19},
+  keywords={Program processors;Microarchitecture;Registers;Arrays;Transient analysis;Hardware;Side-channel attacks;Spectre;speculative-execution;microarchitecture-security;microarchitectural-attack},
+  doi={10.1109/SP.2019.00002}}
+
+@inproceedings{10.1145/3243734.3243761,
+author = {Maisuradze, Giorgi and Rossow, Christian},
+title = {ret2spec: Speculative Execution Using Return Stack Buffers},
+year = {2018},
+isbn = {9781450356930},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3243734.3243761},
+doi = {10.1145/3243734.3243761},
+abstract = {Speculative execution is an optimization technique that has been part of CPUs for over a decade. It predicts the outcome and target of branch instructions to avoid stalling the execution pipeline. However, until recently, the security implications of speculative code execution have not been studied. In this paper, we investigate a special type of branch predictor that is responsible for predicting return addresses. To the best of our knowledge, we are the first to study return address predictors and their consequences for the security of modern software. In our work, we show how return stack buffers (RSBs), the core unit of return address predictors, can be used to trigger misspeculations. Based on this knowledge, we propose two new attack variants using RSBs that give attackers similar capabilities as the documented Spectre attacks. We show how local attackers can gain arbitrary speculative code execution across processes, e.g., to leak passwords another user enters on a shared system. Our evaluation showed that the recent Spectre countermeasures deployed in operating systems can also cover such RSB-based cross-process attacks. Yet we then demonstrate that attackers can trigger misspeculation in JIT environments in order to leak arbitrary memory content of browser processes. Reading outside the sandboxed memory region with JIT-compiled code is still possible with 80\% accuracy on average.},
+booktitle = {Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {2109–2122},
+numpages = {14},
+keywords = {hardware security, javascript, side channel attacks},
+location = {Toronto, Canada},
+series = {CCS '18}
+}
+
+@inproceedings{10.1145/3613424.3614254,
+author = {Orenes-Vera, Marcelo and Yun, Hyunsung and Wistoff, Nils and Heiser, Gernot and Benini, Luca and Wentzlaff, David and Martonosi, Margaret},
+title = {AutoCC: Automatic Discovery of Covert Channels in Time-Shared Hardware},
+year = {2023},
+isbn = {9798400703294},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3613424.3614254},
+doi = {10.1145/3613424.3614254},
+abstract = {Covert channels enable information leakage between security domains that should be isolated by observing execution differences in shared hardware. These channels can appear in any stateful shared resource, including caches, predictors, and accelerators. Previous works have identified many vulnerable components, demonstrating and defending against attacks via reverse engineering. However, this approach requires much human effort and reasoning. With the Cambrian explosion of specialized hardware, it is becoming increasingly difficult to identify all vulnerabilities manually. To tackle this challenge, we propose AutoCC, a methodology that leverages formal property verification (FPV) to automatically discover covert channels in hardware that is shared between processes. AutoCC operates at the register-transfer level (RTL) to exhaustively examine any machine state left by a process after a context switch that creates an execution difference. Upon finding such a difference, AutoCC provides a precise execution trace showing how the information was encoded into the machine state and recovered. Leveraging AutoCC’s flow to generate FPV testbenches that apply our methodology, we evaluated it on four open-source hardware projects, including two RISC-V cores and two accelerators. Without hand-written code or directed tests, AutoCC uncovered known covert channels (within minutes instead of many hours of test-driven emulations) and unknown ones. Although AutoCC is primarily intended to find covert channels, our evaluation has also found RTL bugs, demonstrating that AutoCC is an effective tool to test both the security and reliability of hardware designs.},
+booktitle = {Proceedings of the 56th Annual IEEE/ACM International Symposium on Microarchitecture},
+pages = {871–885},
+numpages = {15},
+keywords = {FPV, covert channel, data leak, flush., formal, information flow, microarchitectural, temporal partitioning, timing channel, verification},
+location = {Toronto, ON, Canada},
+series = {MICRO '23}
+}
+
+@inproceedings{10.1145/3658644.3690344,
+author = {Ceesay-Seitz, Katharina and Solt, Flavien and Razavi, Kaveh},
+title = {μCFI: Formal Verification of Microarchitectural Control-flow Integrity},
+year = {2024},
+isbn = {9798400706363},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3658644.3690344},
+doi = {10.1145/3658644.3690344},
+abstract = {Formal verification of hardware often requires the creation of clock-cycle accurate properties that need tedious and error-prone adaptations for each design. Property violations further require attention from verification engineers to identify affected instructions. This oftentimes manual effort hinders the adoption of formal verification at scale. This paper introduces Microarchitectural Control-Flow Integrity (μCFI), a new general security property that can capture multiple classes of vulnerabilities under different threat models, most notably the microarchitectural violation of constant-time execution and (micro-)architectural vulnerabilities that allow an attacker to hijack the (architectural) control flow. We show a novel approach for the verification of μCFI using a single property that checks for information flows from instruction operands to the program counter by injecting taint at appropriate clock cycles. To check arbitrary sequences of instructions and associate property violations to a specific Instruction Under Verification (IUV), we propose techniques for declassifying tainted data when it is being written to registers and forwarded from the IUV through architecturally known paths. We show that our verification approach is low effort (e.g., requires tagging six signals) while capturing all interactions between unbounded sequences of instructions in the extended threat model of \o{}urname. We verify four RISC-V CPUs against μCFI and prove that μCFI is satisfied in many cases while detecting five new security vulnerabilities (4 CVEs), three of which are in Ibex, which has already been checked by state-of-the-art verification approaches.},
+booktitle = {Proceedings of the 2024 on ACM SIGSAC Conference on Computer and Communications Security},
+pages = {213–227},
+numpages = {15},
+keywords = {formal hardware verification, hardware security, side-channels},
+location = {Salt Lake City, UT, USA},
+series = {CCS '24}
+}
+
+@inproceedings {184415,
+author = {Yuval Yarom and Katrina Falkner},
+title = {{FLUSH+RELOAD}: A High Resolution, Low Noise, L3 Cache {Side-Channel} Attack},
+booktitle = {23rd USENIX Security Symposium (USENIX Security 14)},
+year = {2014},
+isbn = {978-1-931971-15-7},
+address = {San Diego, CA},
+pages = {719--732},
+url = {https://www.usenix.org/conference/usenixsecurity14/technical-sessions/presentation/yarom},
+publisher = {USENIX Association},
+month = aug
+}
