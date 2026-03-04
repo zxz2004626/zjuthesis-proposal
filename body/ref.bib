@@ -207,3 +207,86 @@ keywords = {formal verification, hardware-software contract, shadow logic, specu
 location = {Rotterdam, Netherlands},
 series = {ASPLOS '25}
 }
+
+@book{10.5555/2677118,
+author = {Cerny, Eduard and Dudani, Surrendra and Havlicek, John and Korchemny, Dmitry},
+title = {SVA: The Power of Assertions in SystemVerilog},
+year = {2014},
+isbn = {3319071386},
+publisher = {Springer Publishing Company, Incorporated},
+edition = {2nd},
+abstract = {This book is a comprehensive guide to assertion-based verification of hardware designs using System Verilog Assertions (SVA). It enables readers to minimize the cost of verification by using assertion-based techniques in simulation testing, coverage collection and formal analysis. The book provides detailed descriptions of all the language features of SVA, accompanied by step-by-step examples of how to employ them to construct powerful and reusable sets of properties. The book also shows how SVA fits into the broader System Verilog language, demonstrating the ways that assertions can interact with other System Verilog components. The reader new to hardware verification will benefit from general material describing the nature of design models and behaviors, how they are exercised, and the different roles that assertions play. This second edition covers the features introduced by the recent IEEE 1800-2012. System Verilog standard, explaining in detail the new and enhanced assertion constructs. The book makes SVA usable and accessible for hardware designers, verification engineers, formal verification specialists and EDA tool developers. With numerous exercises, ranging in depth and difficulty, the book is also suitable as a text for students.}
+}
+
+@INPROCEEDINGS{9519500,
+  author={Guarnieri, Marco and Köpf, Boris and Reineke, Jan and Vila, Pepe},
+  booktitle={2021 IEEE Symposium on Security and Privacy (SP)}, 
+  title={Hardware-Software Contracts for Secure Speculation}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1868-1883},
+  keywords={Privacy;Programming;Tools;Software;Hardware;Security;Contracts;Hardware-software-contracts;Secure-speculation;Speculative-non-interference;Spectre;Speculative-execution-attacks;Hardware-software-co-design},
+  doi={10.1109/SP40001.2021.00036}}
+
+@inproceedings{10.1145/3372297.3417246,
+author = {Guanciale, Roberto and Balliu, Musard and Dam, Mads},
+title = {InSpectre: Breaking and Fixing Microarchitectural Vulnerabilities by Formal Analysis},
+year = {2020},
+isbn = {9781450370899},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3372297.3417246},
+doi = {10.1145/3372297.3417246},
+abstract = {The recent Spectre attacks have demonstrated the fundamental insecurity of current computer microarchitecture. The attacks use features like pipelining, out-of-order and speculation to extract arbitrary information about the memory contents of a process. A comprehensive formal microarchitectural model capable of representing the forms of out-of-order and speculative behavior that can meaningfully be implemented in a high performance pipelined architecture has not yet emerged. Such a model would be very useful, as it would allow the existence and non-existence of vulnerabilities, and soundness of countermeasures to be formally established. This paper presents such a model targeting single core processors. The model is intentionally very general and provides an infrastructure to define models of real CPUs. It incorporates microarchitectural features that underpin all known Spectre vulnerabilities. We use the model to elucidate the security of existing and new vulnerabilities, as well as to formally analyze the effectiveness of proposed countermeasures. Specifically, we discover three new (potential) vulnerabilities, including a new variant of Spectre v4, a vulnerability on speculative fetching, and a vulnerability on out-of-order execution, and analyze the effectiveness of existing countermeasures including constant time and serializing instructions.},
+booktitle = {Proceedings of the 2020 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {1853–1869},
+numpages = {17},
+keywords = {vulnerabilities, verification, speculation, out-of-order, microarchitecture, formal models, countermeasures},
+location = {Virtual Event, USA},
+series = {CCS '20}
+}
+
+@inproceedings{10.1145/3319535.3363194,
+author = {Bhattacharyya, Atri and Sandulescu, Alexandra and Neugschwandtner, Matthias and Sorniotti, Alessandro and Falsafi, Babak and Payer, Mathias and Kurmus, Anil},
+title = {SMoTherSpectre: Exploiting Speculative Execution through Port Contention},
+year = {2019},
+isbn = {9781450367479},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3319535.3363194},
+doi = {10.1145/3319535.3363194},
+abstract = {Spectre, Meltdown, and related attacks have demonstrated that kernels, hypervisors, trusted execution environments, and browsers are prone to information disclosure through micro-architectural weaknesses. However, it remains unclear as to what extent other applications, in particular those that do not load attacker-provided code, may be impacted. It also remains unclear as to what extent these attacks are reliant on cache-based side channels. We introduce SMoTherSpectre, a speculative code-reuse attack that leverages port-contention in simultaneously multi-threaded processors (SMoTher) as a side channel to leak information from a victim process. SMoTher is a fine-grained side channel that detects contention based on a single victim instruction. To discover real-world gadgets, we describe a methodology and build a tool that locates SMoTher-gadgets in popular libraries. In an evaluation on glibc, we found hundreds of gadgets that can be used to leak information. Finally, we demonstrate proof-of-concept attacks against the OpenSSH server, creating oracles for determining four host key bits, and against an application performing encryption using the OpenSSL library, creating an oracle which can differentiate a bit of the plaintext through gadgets in libcrypto and glibc.},
+booktitle = {Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {785–800},
+numpages = {16},
+keywords = {speculative execution, simultaneous multithreading, side-channel, microarchitecture, attack},
+location = {London, United Kingdom},
+series = {CCS '19}
+}
+
+@inproceedings{10.5555/3277203.3277277,
+author = {Van Bulck, Jo and Minkin, Marina and Weisse, Ofir and Genkin, Daniel and Kasikci, Baris and Piessens, Frank and Silberstein, Mark and Wenisch, Thomas F. and Yarom, Yuval and Strackx, Raoul},
+title = {Foreshadow: extracting the keys to the intel SGX kingdom with transient out-of-order execution},
+year = {2018},
+isbn = {9781931971461},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Trusted execution environments, and particularly the Software Guard eXtensions (SGX) included in recent Intel x86 processors, gained significant traction in recent years. A long track of research papers, and increasingly also real-world industry applications, take advantage of the strong hardware-enforced confidentiality and integrity guarantees provided by Intel SGX. Ultimately, enclaved execution holds the compelling potential of securely offloading sensitive computations to untrusted remote platforms.We present Foreshadow, a practical software-only microarchitectural attack that decisively dismantles the security objectives of current SGX implementations. Crucially, unlike previous SGX attacks, we do not make any assumptions on the victim enclave's code and do not necessarily require kernel-level access. At its core, Foreshadow abuses a speculative execution bug in modern Intel processors, on top of which we develop a novel exploitation methodology to reliably leak plaintext enclave secrets from the CPU cache. We demonstrate our attacks by extracting full cryptographic keys from Intel's vetted architectural enclaves, and validate their correctness by launching rogue production enclaves and forging arbitrary local and remote attestation responses. The extracted remote attestation keys affect millions of devices.},
+booktitle = {Proceedings of the 27th USENIX Conference on Security Symposium},
+pages = {991–1008},
+numpages = {18},
+location = {Baltimore, MD, USA},
+series = {SEC'18}
+}
+
+@INPROCEEDINGS{8574598,
+  author={Trippel, Caroline and Lustig, Daniel and Martonosi, Margaret},
+  booktitle={2018 51st Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)}, 
+  title={CheckMate: Automated Synthesis of Hardware Exploits and Security Litmus Tests}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={947-960},
+  keywords={Microarchitecture;Hardware;Side-channel attacks;Timing;Tools;Kernel;hardware security, automated verification, relational model finding, exploit synthesis, side-channel attacks},
+  doi={10.1109/MICRO.2018.00081}}
