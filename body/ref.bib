@@ -291,3 +291,65 @@ pages={947-960},
 keywords={Microarchitecture;Hardware;Side-channel attacks;Timing;Tools;Kernel;hardware security, automated verification, relational model finding, exploit synthesis, side-channel attacks},
 doi={10.1109/MICRO.2018.00081}
 }
+
+@inproceedings{10.1145/3319535.3354252,
+author = {Schwarz, Michael and Lipp, Moritz and Moghimi, Daniel and Van Bulck, Jo and Stecklina, Julian and Prescher, Thomas and Gruss, Daniel},
+title = {ZombieLoad: Cross-Privilege-Boundary Data Sampling},
+year = {2019},
+isbn = {9781450367479},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3319535.3354252},
+doi = {10.1145/3319535.3354252},
+abstract = {In early 2018, Meltdown first showed how to read arbitrary kernel memory from user space by exploiting side-effects from transient instructions. While this attack has been mitigated through stronger isolation boundaries between user and kernel space, Meltdown inspired an entirely new class of fault-driven transient-execution attacks. Particularly, over the past year, Meltdown-type attacks have been extended to not only leak data from the L1 cache but also from various other microarchitectural structures, including the FPU register file and store buffer.In this paper, we present the ZombieLoad attack which uncovers a novel Meltdown-type effect in the processor's fill-buffer logic. Our analysis shows that faulting load instructions (i.e., loads that have to be re-issued) may transiently dereference unauthorized destinations previously brought into the fill buffer by the current or a sibling logical CPU. In contrast to concurrent attacks on the fill buffer, we are the first to report data leakage of recently loaded and stored stale values across logical cores even on Meltdown- and MDS-resistant processors. Hence, despite Intel's claims, we show that the hardware fixes in new CPUs are not sufficient. We demonstrate ZombieLoad's effectiveness in a multitude of practical attack scenarios across CPU privilege rings, OS processes, virtual machines, and SGX enclaves. We discuss both short and long-term mitigation approaches and arrive at the conclusion that disabling hyperthreading is the only possible workaround to prevent at least the most-powerful cross-hyperthread attack scenarios on current processors, as Intel's software fixes are incomplete.},
+booktitle = {Proceedings of the 2019 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {753–768},
+numpages = {16},
+keywords = {transient execution, side-channel attack, meltdown, fill buffer},
+location = {London, United Kingdom},
+series = {CCS '19}
+}
+
+@inproceedings {281436,
+author = {Johannes Wikner and Kaveh Razavi},
+title = {{RETBLEED}: Arbitrary Speculative Code Execution with Return Instructions},
+booktitle = {31st USENIX Security Symposium (USENIX Security 22)},
+year = {2022},
+isbn = {978-1-939133-31-1},
+address = {Boston, MA},
+pages = {3825--3842},
+url = {https://www.usenix.org/conference/usenixsecurity22/presentation/wikner},
+publisher = {USENIX Association},
+month = aug
+}
+
+@inproceedings{10.5555/3620237.3620639,
+author = {Moghimi, Daniel},
+title = {Downfall: exploiting speculative data gathering},
+year = {2023},
+isbn = {978-1-939133-37-3},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {We introduce Downfall attacks, new transient execution attacks that undermine the security of computers running everywhere across the internet. We exploit the gather instruction on high-performance x86 CPUs to leak data across boundaries of user-kernel, processes, virtual machines, and trusted execution environments. We also develop practical and end-to-end attacks to steal cryptographic keys, program's runtime data, and even data at rest (arbitrary data). Our findings, exploitation techniques, and demonstrated attacks defeat all previous defenses, calling for critical hardware fixes and security updates for widely-used client and server computers.},
+booktitle = {Proceedings of the 32nd USENIX Conference on Security Symposium},
+articleno = {402},
+numpages = {15},
+location = {Anaheim, CA, USA},
+series = {SEC '23}
+}
+
+@inproceedings{10.5555/3620237.3620646,
+author = {Trujillo, Dani\"{e}l and Wikner, Johannes and Razavi, Kaveh},
+title = {INCEPTION: exposing new attack surfaces with training in transient execution},
+year = {2023},
+isbn = {978-1-939133-37-3},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {To protect against transient control-flow hijacks, software relies on a secure state of microarchitectural buffers that are involved in branching decisions. To achieve this secure state, hardware and software mitigations restrict or sanitize these microarchitectural buffers when switching the security context, e.g., when a user process enters the kernel. Unfortunately, we show that these mitigations do not prevent an attacker from manipulating the state of these microarchitectural buffers in many cases of interest. In particular, we present Training in Transient Execution (TTE), a new class of transient execution attacks that enables an attacker to train a target microarchitectural buffer after switching to the victim context. To show the impact of TTE, we build an end-to-end exploit called INCEPTION that creates an infinite transient loop in hardware to train the return stack buffer with an attacker-controlled target in all existing AMD Zen microarchitectures. INCEPTION leaks arbitrary kernel memory at a rate of 39 bytes/s on AMD Zen 4 despite all mitigations against transient controlflow hijacks, including the recent Automatic IBRS.},
+booktitle = {Proceedings of the 32nd USENIX Conference on Security Symposium},
+articleno = {409},
+numpages = {18},
+location = {Anaheim, CA, USA},
+series = {SEC '23}
+}
+
