@@ -141,6 +141,16 @@ location = {Toronto, Canada},
 series = {CCS '18}
 }
 
+@misc{siddens2026memorydisordermemoryreorderings,
+      title={Memory DisOrder: Memory Re-orderings as a Timerless Side-channel}, 
+      author={Sean Siddens and Sanya Srivastava and Reese Levine and Josiah Dykstra and Tyler Sorensen},
+      year={2026},
+      eprint={2601.08770},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2601.08770}, 
+}
+
 @inproceedings{10.1145/3613424.3614254,
 author = {Orenes-Vera, Marcelo and Yun, Hyunsung and Wistoff, Nils and Heiser, Gernot and Benini, Luca and Wentzlaff, David and Martonosi, Margaret},
 title = {AutoCC: Automatic Discovery of Covert Channels in Time-Shared Hardware},
@@ -353,3 +363,55 @@ location = {Anaheim, CA, USA},
 series = {SEC '23}
 }
 
+@inproceedings{10.1145/3719027.3765061,
+author = {Thomas, Fabian and Torres, Michael and Moghimi, Daniel and Schwarz, Michael},
+title = {ExfilState: Automated Discovery of Timer-Free Cache Side Channels on ARM CPUs},
+year = {2025},
+isbn = {9798400715259},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3719027.3765061},
+doi = {10.1145/3719027.3765061},
+abstract = {Microarchitectural attacks and reverse-engineering efforts rely on inferring the cache state of cache lines. While high-resolution timers traditionally enable this, such timers are increasingly restricted or unavailable to unprivileged users on modern ARM64 systems. We introduce a fuzzing-based methodology to automatically discover instruction sequences that leak cache state into architectural state—without timing measurements. Our proof-of-concept, ExfilState, uses differential testing, F-score ranking, and covert-channel verification to identify architectural side channels on ARM64 CPUs. Across 160 devices with 37 microarchitectures—including smartphones, laptops, and cloud servers--ExfilState uncovers 5 undocumented side channels, 2 of which are reliably and widely exploitable. We demonstrate their practical impact with a timer-free Spectre variant, a cache-based AES key-recovery attack, and a novel defense mechanism that aborts sensitive algorithms on eviction of victim cache lines. Our findings show that architectural side channels are both real and exploitable, even in environments without timers, broadening the attack surface on modern ARM64 platforms.},
+booktitle = {Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {2564–2578},
+numpages = {15},
+keywords = {architectural side channels, cpu fuzzing, microarchitecture},
+location = {Taipei, Taiwan},
+series = {CCS '25}
+}
+
+@inproceedings {291182,
+author = {Jiyong Yu and Aishani Dutta and Trent Jaeger and David Kohlbrenner and Christopher W. Fletcher},
+title = {Synchronization Storage Channels ({{{{{S2C)}}}}}: Timer-less Cache {Side-Channel} Attacks on the Apple M1 via Hardware Synchronization Instructions},
+booktitle = {32nd USENIX Security Symposium (USENIX Security 23)},
+year = {2023},
+isbn = {978-1-939133-37-3},
+address = {Anaheim, CA},
+pages = {1973--1990},
+url = {https://www.usenix.org/conference/usenixsecurity23/presentation/yu-jiyong},
+publisher = {USENIX Association},
+month = aug
+}
+
+@InProceedings{10.1007/11547662_24,
+author="Terauchi, Tachio
+and Aiken, Alex",
+editor="Hankin, Chris
+and Siveroni, Igor",
+title="Secure Information Flow as a Safety Problem",
+booktitle="Static Analysis",
+year="2005",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="352--367",
+abstract="The termination insensitive secure information flow problem can be reduced to solving a safety problem via a simple program transformation. Barthe, D'Argenio, and Rezk coined the term ``self-composition'' to describe this reduction. This paper generalizes the self-compositional approach with a form of information downgrading recently proposed by Li and Zdancewic. We also identify a problem with applying the self-compositional approach in practice, and we present a solution to this problem that makes use of more traditional type-based approaches. The result is a framework that combines the best of both worlds, i.e., better than traditional type-based approaches and better than the self-compositional approach.",
+isbn="978-3-540-31971-9"
+}
+
+@online{ibex,
+  author       = {lowRISC},
+  title        = {ibex},
+  organization = {GitHub},
+  url          = {https://github.com/lowRISC/ibex},
+}
